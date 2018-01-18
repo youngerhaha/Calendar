@@ -1,0 +1,29 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIColor+Addition.h"
+#import "NSDate+Addition.h"
+#import "LYGUtil.h"
+
+//屏幕宽
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+//屏幕高
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//通过类对象生成string
+#define StringWithClass(Class) NSStringFromClass([Class class])
+
+#endif

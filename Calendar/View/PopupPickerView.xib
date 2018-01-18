@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PopupPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNc-C0-gIx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lct-eR-h9A">
+                    <rect key="frame" x="0.0" y="332" width="320" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkf-PA-lgV">
+                            <rect key="frame" x="272" y="11" width="36" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="完成">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="B37-Hr-E8G"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Lkf-PA-lgV" secondAttribute="trailing" constant="12" id="dil-SY-V2k"/>
+                        <constraint firstAttribute="height" constant="56" id="ijr-4v-hbL"/>
+                        <constraint firstAttribute="centerY" secondItem="Lkf-PA-lgV" secondAttribute="centerY" id="oYP-7A-y7w"/>
+                    </constraints>
+                </view>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHI-M0-HK0">
+                    <rect key="frame" x="0.0" y="388" width="320" height="180"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="V19-Rn-8Wb"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Bm6-mH-gYC"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="s82-l6-xfJ"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zHI-M0-HK0" firstAttribute="top" secondItem="lct-eR-h9A" secondAttribute="bottom" id="DAJ-er-P8p"/>
+                <constraint firstAttribute="bottom" secondItem="zHI-M0-HK0" secondAttribute="bottom" id="EU5-fg-9Mw"/>
+                <constraint firstItem="lct-eR-h9A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FM1-Qq-XF6"/>
+                <constraint firstAttribute="trailing" secondItem="lct-eR-h9A" secondAttribute="trailing" id="FZw-gV-zkl"/>
+                <constraint firstItem="zNc-C0-gIx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NIb-Rm-Vhb"/>
+                <constraint firstItem="zNc-C0-gIx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nnp-0j-3Nx"/>
+                <constraint firstItem="zHI-M0-HK0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QI7-m2-GNm"/>
+                <constraint firstAttribute="trailing" secondItem="zNc-C0-gIx" secondAttribute="trailing" id="RQI-6k-bPt"/>
+                <constraint firstAttribute="bottom" secondItem="zNc-C0-gIx" secondAttribute="bottom" id="nkR-1d-iM2"/>
+                <constraint firstAttribute="trailing" secondItem="zHI-M0-HK0" secondAttribute="trailing" id="yql-Rv-ZWk"/>
+            </constraints>
+            <connections>
+                <outlet property="accessoryView" destination="lct-eR-h9A" id="WFp-kN-ZMM"/>
+                <outlet property="cancelView" destination="zNc-C0-gIx" id="aSo-6I-w7M"/>
+                <outlet property="pickerView" destination="zHI-M0-HK0" id="Yv8-TW-MUS"/>
+            </connections>
+            <point key="canvasLocation" x="231" y="301"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
