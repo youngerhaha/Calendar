@@ -1,0 +1,12 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "XA3763X27D.com.kymco.motofun",
+                "paths": [ "*","/app/*"]
+            }
+
+        ]
+    }
+}
